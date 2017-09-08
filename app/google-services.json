@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1050358885640",
+    "firebase_url": "https://djam-a1bc4.firebaseio.com",
+    "project_id": "djam-a1bc4",
+    "storage_bucket": "djam-a1bc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050358885640:android:fdba8e95c7a24034",
+        "android_client_info": {
+          "package_name": "com.example.sfreyman.djam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1050358885640-akm84m0bn597eebkmq7559thj1ecq668.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sfreyman.djam",
+            "certificate_hash": "dda34ae181d3c036d8b61127d01c2380ce10dfad"
+          }
+        },
+        {
+          "client_id": "1050358885640-1jjn8gkpkflq0hjkjnfcmtc59djn9kgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkEmU-jxfyXPGH2z4N7njmkknIY8TjGjM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1050358885640-1jjn8gkpkflq0hjkjnfcmtc59djn9kgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/songAdapterContainer"
+    android:layout_height="50dp"
+    android:layout_width="match_parent">
+    <!--
+    <ProgressBar
+        android:id="@+id/albumArtworkLoading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:tint="@color/colorAccent"/>
+
+    <com.example.sfreyman.djam.Icon
+        android:id="@+id/songAlbumArtwork"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/albumArtworkListDescription"/>
+-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="6dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/songTitle"
+            android:text="@string/list_song_title"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8sp"
+            android:textSize="18sp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/songArtist"
+            android:text="@string/list_song_artist"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginRight="8sp"
+            android:layout_marginLeft="8sp"
+            android:layout_toRightOf="@+id/songDash"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+
+        <TextView
+            android:id="@+id/songDash"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/dash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/songTitle"
+            android:textSize="18sp"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

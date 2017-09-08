@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.sfreyman.djam.GoLiveActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/live"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="64dp"
+        android:background="@android:color/darker_gray" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/currentlyPlayingTimeBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/currentlyPlayingTitle"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/currentlyPlayingAlbumArt"
+                android:layout_toRightOf="@+id/currentlyPlayingAlbumArt" />
+
+            <com.example.sfreyman.djam.Icon
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/currentlyPlayingAlbumArt" />
+
+            <TextView
+                android:id="@+id/currentlyPlayingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="6dp"
+                android:paddingRight="6dp"
+                android:paddingStart="6dp"
+                android:paddingLeft="6dp"
+                android:text="0:00 / 0:00"
+                android:textSize="12sp"
+                android:layout_below="@+id/currentlyPlayingTimeBar"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/currentlyPlayingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="6dp"
+                android:paddingRight="6dp"
+                android:paddingStart="6dp"
+                android:paddingLeft="6dp"
+                android:text="@string/list_song_title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:layout_alignLeft="@id/currentlyPlayingTimeBar"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/currentlyPlayingAlbumArt"
+                android:layout_toEndOf="@+id/currentlyPlayingAlbumArt" />
+
+            <TextView
+                android:id="@+id/currentlyPlayingArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="6dp"
+                android:paddingRight="6dp"
+                android:paddingStart="6dp"
+                android:paddingLeft="6dp"
+                android:text="@string/list_song_artist"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:layout_below="@+id/currentlyPlayingTitle"
+                android:layout_toRightOf="@+id/currentlyPlayingAlbumArt"
+                android:layout_toEndOf="@+id/currentlyPlayingAlbumArt" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <View
+            android:id="@+id/centerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <AutoCompleteTextView
+            android:id="@+id/searchSongListGoLive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:dropDownHeight="wrap_content"
+            android:hint="@string/songSearch"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/currentQueueGoLiveTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchSongListGoLive"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/nextSongPrompt"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:gravity="center"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/currentQueueGoLiveCard"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_below="@+id/currentQueueGoLiveTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.example.sfreyman.djam.Icon
+                    android:id="@+id/songAlbumArtworkGoLiveNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:contentDescription="@string/albumArtworkListDescription"
+                    android:src="@drawable/blank" />
+
+                <TextView
+                    android:id="@+id/songTitleGoLiveNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/songAlbumArtworkGoLiveNext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:paddingEnd="6dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:paddingStart="6dp"
+                    android:paddingTop="6dp"
+                    android:text="Next Song Title"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/songArtistGoLiveNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/songTitleGoLiveNext"
+                    android:layout_centerHorizontal="true"
+                    android:paddingEnd="6dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:paddingStart="6dp"
+                    android:text="Next Song Artist"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="accessToken">accessToken</string>
+    <string name="accessCode">accessCode</string>
+    <string name="refreshToken">refreshToken</string>
+    <string name="username">username</string>
+    <string name="profilePicture">profilePicture</string>
+</resources>

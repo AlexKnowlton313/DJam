@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.sfreyman.djam.GoLiveActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currently Playing"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/streamTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/songArtworkIV"
+            android:layout_alignRight="@+id/songArtworkIV"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="20dp"
+            android:text="streamTitleTV"
+            android:layout_above="@+id/byText"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/byText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/streamTitleTV"
+            android:layout_alignRight="@+id/streamTitleTV"
+            android:layout_above="@+id/streamerNameTV"
+            android:text="by"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/streamerNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="streamerNameTV"
+            android:textSize="18sp"
+            android:layout_above="@id/songArtworkIV"
+            android:layout_alignRight="@+id/byText"
+            android:layout_alignEnd="@+id/byText"
+            android:textColor="@color/colorPrimary" />
+
+        <ImageView
+            android:id="@+id/streamerProfPicIV"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignStart="@+id/songArtworkIV"
+            android:layout_above="@+id/songArtworkIV"
+            android:layout_alignLeft="@+id/songArtworkIV"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/profile_pic_filler_icon"/>
+
+        <ImageView
+            android:id="@+id/songArtworkIV"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/songTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/songArtworkIV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:textSize="20sp"
+            android:text="songTitleTV"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/artistTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/songTitleTV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:textSize="18sp"
+            android:text="artistTitleTV"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

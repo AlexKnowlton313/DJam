@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/live_stream">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:id="@+id/streamTitleTVMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/songArtworkIVMain"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/songArtworkIVMain"
+            android:layout_marginRight="15dp"
+            android:text="streamTitleTV"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/byText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/streamTitleTVMain"
+            android:layout_alignRight="@+id/streamTitleTVMain"
+            android:layout_below="@+id/streamTitleTVMain"
+            android:text="by"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/streamerNameTVMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/byText"
+            android:layout_alignRight="@+id/byText"
+            android:layout_below="@+id/byText"
+            android:text="streamerNameTV"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/streamerProfPicIVMain"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/songArtworkIVMain"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/songArtworkIVMain"
+            android:foregroundTint="@color/colorPrimary"
+            android:src="@drawable/profile_pic_filler_icon" />
+
+        <ImageView
+            android:id="@+id/songArtworkIVMain"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/streamerNameTVMain"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/streamerNameTVMain"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/feedPlay"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="50dp"
+                android:contentDescription="@string/playPauseButton"
+                android:foregroundTint="@color/colorPrimaryDark"
+                android:src="@drawable/play" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

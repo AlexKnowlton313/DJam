@@ -1,0 +1,57 @@
+TEAM 8
+Sofya, Alex, Marc, Leila
+
+## Premium Spotify Accounts 
+
+| username   | password  | experation date |
+-------------------------------------------|
+| uimadjam   | uimadjam  |     6/1/17      |
+| uimadjam_2 | uimadjam2 |     6/3/17      |
+| uimadjam3  | uimadjam  |     XXXXXX      |
+| uimadjam4  | uimadjam  |     XXXXXX      |
+------------------------------------------
+
+## Spotify API Information
+
+uimadjam is the 'owner' of the app.
+Log in and go to 'My Applications' for more information.
+
+Redirect URI:   djamspotify://callback
+Client ID:      c0cb1b7bf2b949eca66e7e58389bc79e
+Client Secret:  a4db4cafe4814eddba2a5d9a2450986f
+
+## Some explanations
+It’s important to note that we wanted to emphasize this application
+being for *live* streaming purposes, and not simply for listening
+music and having the queue under your control.
+For these reasons the following features apply:
+- No song title in the live stream feed view
+	- Obviously, it wouldn’t be difficult for us to add the 
+	title of the song to the screen. We thought it would be
+	unnecessary and would take away from the concept of
+	live streaming. All the user needs to know is the user
+	of the stream, its title, and the album cover (more for
+	aesthetics purposes). Seeing the name of the song can
+	prevent a user from tuning to the channel.
+- Only 2 songs in the queue
+	- Again, we didn’t want the streamer to queue many songs
+	and leave their device. The point of the application is
+	DJing, so we wanted the streamer to stay on top of their queue
+	constantly (just like on real radio).
+- No pause button
+	- From the perspective of the streamer, the streamer doesn’t
+	need to be able to pause the stream (just like on real radio).
+	From the perspective of the user who’s tuning to a live stream,
+	stopping a live stream is easy — by clicking the Back button
+	from the Currently Playing view.
+
+OTHERS:
+- We wanted graders to pay attention to the fact that all album covers,
+song titles, and artists update automatically, once the next song in the queue 
+starts playing. We used Firebase for this feature.
+- Only Premium Spotify accounts (their API only allows for Premium)
+- Still some bugs present, will resubmitted backend code for the next deadline.
+- Design was implemented for the tablet we had. We will try to make it more
+device-universal for the next deadline.
+
+## END

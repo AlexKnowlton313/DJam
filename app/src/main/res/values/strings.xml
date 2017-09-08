@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">DJam</string>
+    <string name="log_out">Logout</string>
+    <string name="songSearch">Search Songs</string>
+    <string name="userSearch">Search Live Users</string>
+    <string name="dash">-</string>
+    <string name="list_song_title">Song Title</string>
+    <string name="list_song_artist">Song Artist</string>
+    <string name="albumArtworkListDescription">Album Cover</string>
+    <string name="pickSongPrompt">Pick a song to start streaming!</string>
+    <string name="goLive">Go Live!</string>
+    <string name="currentQueueGoLiveTitle">Next Up</string>
+    <string name="currentlyPlayingGoLive">Currently Playing</string>
+    <string name="playPauseButton">Play/Pause button</string>
+    <string name="signin">Sign In</string>
+    <string name="live">Live</string>
+    <string name="liveStreamTitle">Enter Stream Title</string>
+    <string name="nextSongPrompt">Pick the next song!</string>
+</resources>
